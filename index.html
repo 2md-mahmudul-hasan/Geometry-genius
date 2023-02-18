@@ -38,9 +38,9 @@
             </p>
             <div class="">
               <input id="triangle-base" size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="b"><label
-                class="p-1">b</label>
+                class="p-1">cm</label>
               <input id="triangle-height" size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="h"><label
-                class="p-1">h</label>
+                class="p-1">cm</label>
             </div>
           </div>
           <button id="triangle-btn" type="button"
@@ -62,11 +62,13 @@
               Area(A) = w x l
             </p>
             <div class="">
-              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="w"><label class="p-1">w</label>
-              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="l"><label class="p-1">l</label>
+              <input id="rectangle-width" size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="w"><label
+                class="p-1">cm</label>
+              <input id="rectangle-length" size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="l"><label
+                class="p-1">cm</label>
             </div>
           </div>
-          <button type="button"
+          <button id="rectangle-btn" type="button"
             class="block m-auto px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate
           </button>
 
@@ -168,9 +170,10 @@
         <!-- end ellipse -->
       </div>
 
-      <div class="geometry-accounting bg-blue-500 p-2">
-
-        accounting
+      <div class="geometry-accounting p-2 text-center">
+        <h2 class="underline text-2xl"> Area calculation </h2>
+        <ol type="1" id="calculation-area">
+        </ol>
       </div>
     </main>
   </div>
