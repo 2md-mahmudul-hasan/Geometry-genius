@@ -1,5 +1,4 @@
 // triangle 
-
 document.getElementById('triangle-btn').addEventListener('click', function(){
   const triangleBase = document.getElementById('triangle-base');
   const triangleBaseText = triangleBase.value;
@@ -9,13 +8,25 @@ document.getElementById('triangle-btn').addEventListener('click', function(){
   const triangleHeightText = triangleHeight.value;
   const triangleHeightTextInfloat = parseFloat(triangleHeightText)
 
+   if(isNaN(triangleBaseTextinNumber) || isNaN(triangleHeightTextInfloat)){
+    alert('please input number value');
+    return;
+    }
+    if(triangleBaseTextinNumber <=0 ||triangleHeightTextInfloat <=0 ){
+    alert('Please enter positive value');
+     return;
+   }
+   
   const triangleArea = (triangleBaseTextinNumber * triangleHeightTextInfloat)/2;
   const triangleAreaAreaInTwoDecimal = triangleArea.toFixed(2)
 
   const ol = document.getElementById("calculation-area");
   const li = document.createElement("li");
-  li.innerText = "Triangle Area" + " " + triangleAreaAreaInTwoDecimal;
-  ol.appendChild(li)
+  const btn = document.createElement('button');
+  btn.classList.add("cal-btn");
+  btn.innerText = "convert to m2"
+  li.innerText = "Triangle" + " " + triangleAreaAreaInTwoDecimal ;
+  ol.appendChild(li).appendChild(btn)
 })
 
 //rectangle
@@ -29,13 +40,27 @@ document.getElementById('rectangle-btn').addEventListener('click', function(){
   const rectangleLengthTextInNumber =  parseFloat(rectangleLengthText);
 
 
+  //validation 
+  if(isNaN(rectangleWidthTextInNumber) || isNaN(rectangleLengthTextInNumber)){
+    alert('please input number value');
+    return;
+    }
+    if(rectangleWidthTextInNumber <=0 ||rectangleWidthTextInNumber <=0 ){
+    alert('Please enter positive value');
+     return;
+   }
+
+
   const rectangleArea = (rectangleWidthTextInNumber * rectangleLengthTextInNumber);
   const rectangleAreaInTwoDeciaml = rectangleArea.toFixed(2);
 
   const ol = document.getElementById("calculation-area");
     const li = document.createElement("li");
-    li.innerText = "Rectangle Area " + " " + rectangleAreaInTwoDeciaml;
-    ol.appendChild(li)
+    const btn = document.createElement('button');
+    btn.classList.add("cal-btn");
+    btn.innerText = "convert to m2"
+    li.innerText = "Rectangle" + " " + rectangleAreaInTwoDeciaml;
+    ol.appendChild(li).appendChild(btn)
 })
 
 //parallelogram
@@ -48,12 +73,57 @@ document.getElementById('parallelogram-btn').addEventListener('click', function(
   const parallelgramHeigntText = parallelgramHeignt.value;
   const parallelgramHeigntTextInNumber =parseFloat(parallelgramHeigntText);
 
+
+  //validation 
+  if(isNaN(parallelgramBaseTextInNumber) || isNaN(parallelgramHeigntTextInNumber)){
+    alert('please input number value');
+    return;
+    }
+    if(parallelgramBaseTextInNumber <=0 ||parallelgramHeigntTextInNumber <=0 ){
+    alert('Please enter positive value');
+      return;
+    }
+
   const parallelgramArea = (parallelgramBaseTextInNumber * parallelgramHeigntTextInNumber).toFixed(2);
 
   const ol = document.getElementById("calculation-area");
   const li = document.createElement("li");
-  li.innerText = "Parallelgram Area" + " " + parallelgramArea;
-  ol.appendChild(li)
+  const btn = document.createElement('button');
+  btn.classList.add("cal-btn");
+  btn.innerText = "convert to m2"
+  li.innerText = "Parallelgram" + " " + parallelgramArea;
+  ol.appendChild(li).appendChild(btn)
+})
+
+//Rhombus
+document.getElementById('rhombus-btn').addEventListener('click', function(){
+  const rhombusD1 = document.getElementById('rhombus-d1');
+  const rhombusD1Text = rhombusD1.value;
+  const rhombusD1InNumber = parseFloat(rhombusD1Text)
+
+  const rhombusD2 = document.getElementById('rhombus-d2');
+  const rhombusD2Text = rhombusD2.value;
+  const rhombusD2InNumber = parseFloat(rhombusD2Text)
+
+  //validation 
+  if(isNaN(rhombusD1InNumber) || isNaN(rhombusD2InNumber)){
+    alert('please input number value');
+    return;
+    }
+    if(rhombusD1InNumber <=0 ||rhombusD2InNumber <=0 ){
+    alert('Please enter positive value');
+      return;
+    }
+
+  const rhombusArea = (.5* rhombusD1InNumber * rhombusD2InNumber).toFixed(2);
+
+  const ol = document.getElementById("calculation-area");
+  const li = document.createElement("li");
+  const btn = document.createElement('button');
+  btn.classList.add("cal-btn");
+  btn.innerText = "convert to m2"
+  li.innerText = "Rhombus" + " " + rhombusArea;
+  ol.appendChild(li).appendChild(btn)
 })
 
 //Pentagon
@@ -62,36 +132,33 @@ document.getElementById('pentagon-btn').addEventListener('click', function(){
   const pentagonperimeterText = pentagonperimeter.value;
   const pentagonperimeterInNumber = parseFloat(pentagonperimeterText)
 
-  const pentagonApothem = document.getElementById('pentagon-perimeter');
+  const pentagonApothem = document.getElementById('pentagon-apothem');
   const pentagonApothemText = pentagonApothem.value;
   const pentagonApothemInNumber = parseFloat(pentagonApothemText)
+
+  //validation 
+  if(isNaN(pentagonperimeterInNumber) || isNaN(pentagonApothemInNumber)){
+    alert('please input number value');
+    return;
+    }
+  
+  if(pentagonperimeterInNumber <=0 ||pentagonApothemInNumber <=0 ){
+  alert('Please enter positive value');
+    return;
+  }
 
   const pentagonArea = .5*(pentagonperimeterInNumber * pentagonApothemInNumber).toFixed(2);
 
   const ol = document.getElementById("calculation-area");
   const li = document.createElement("li");
-  li.innerText = "Pentagon Area" + " " + pentagonArea;
-  ol.appendChild(li)
+  const btn = document.createElement('button');
+  btn.classList.add("cal-btn");
+  btn.innerText = "convert to m2"
+  li.innerText = "Pentagon" + " " + pentagonArea;
+  ol.appendChild(li).appendChild(btn)
 })
 
 
-//Rhombus
-document.getElementById('rhombus-btn').addEventListener('click', function(){
-  const rhombusD1 = document.getElementById('rhombus-d1');
-  const rhombusD1Text = rhombusD1.value;
-  const rhombusD1InNumber = parseFloat(rhombusD1Text)
-
-  const rhombusD2 = document.getElementById('rhombus-d1');
-  const rhombusD2Text = rhombusD2.value;
-  const rhombusD2InNumber = parseFloat(rhombusD2Text)
-
-  const rhombusArea = .5*(rhombusD1InNumber * rhombusD2InNumber).toFixed(2);
-
-  const ol = document.getElementById("calculation-area");
-  const li = document.createElement("li");
-  li.innerText = "Rhombus Area" + " " + rhombusArea;
-  ol.appendChild(li)
-})
 
 //ellipse
 document.getElementById('ellipse-btn').addEventListener('click', function(){
@@ -103,10 +170,23 @@ document.getElementById('ellipse-btn').addEventListener('click', function(){
   const bAxisText = bAxis.value;
   const bAxisTextNumber = parseFloat(bAxisText)
 
+  //validation 
+  if(isNaN(aAxisTextNumber) || isNaN(bAxisTextNumber)){
+    alert('please input number value');
+    return;
+    }
+    if(aAxisTextNumber <=0 ||bAxisTextNumber <=0 ){
+    alert('Please enter positive value');
+      return;
+    }
+
   const ellipseArea = 3.14*(aAxisTextNumber * bAxisTextNumber).toFixed(2);
 
   const ol = document.getElementById("calculation-area");
   const li = document.createElement("li");
-  li.innerText = "ellipse Area" + " " + ellipseArea;
-  ol.appendChild(li)
+  const btn = document.createElement('button');
+  btn.classList.add("cal-btn");
+  btn.innerText = "convert to m2"
+  li.innerText = "ellipse" + " " + ellipseArea;
+  ol.appendChild(li).appendChild(btn)
 })

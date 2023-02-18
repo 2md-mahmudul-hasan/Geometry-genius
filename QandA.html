@@ -6,11 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Dom Question and ansewer </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./aAnda.css">
 </head>
 
 <body>
   <div class="container">
-    <div class="questionAndAnswer">
+    <div class="questionAndAnswer grid grid-cols-2">
       <div class="singleQandA">
         <h2>What is DOM and what is the purpose of DOM?</h2>
         <p>Ans: Dom for Document Object Model is an application programming interface(Api) for html or xhtml documents
@@ -31,7 +33,7 @@
         </p>
       </div>
 
-      <div class="singleQanda">
+      <div class="singleQandA">
         <h2>What is event bubble?</h2>
         <p>Ans: The Event bubbling in JavaScript is a type of event propagation. The event triggers the innermost target
           element and consecutively triggers the parent element of the target element in the same hierarchy until it
@@ -40,20 +42,15 @@
           It is a procedure where it starts from the element that triggered the event and then bubbles up to the
           ancestor elements in the hierarchy.
       </div>
+
+      <div class="singleQandA">
+        <h2>What is a callback function and why will you use it.</h2>
+        <p> Ans:When a function takes augument another function, Its call callback function.We need callback functions
+          because many JavaScript actions are asynchronous, which means they don't really stop the program 
+          from running until they're completed, as you're probably used to. Instead, it will execute in the background
+          while the rest of the code runs. </p>
+      </div>
     </div>
-
-
-    <div class="singleQanda">
-      <h2>What is a callback function and why will you use it</h2>
-      <p> Ans:When a function takes parameter another function, Its call callback function.We need callback functions
-        because many JavaScript actions are asynchronous, which means they don't really stop the program (or a function)
-        from running until they're completed, as you're probably used to. Instead, it will execute in the background
-        while the rest of the code runs. </p>
-    </div>
-  </div>
-
-
-
   </div>
 </body>
 
