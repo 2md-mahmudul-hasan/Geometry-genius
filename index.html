@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <title> geometry genius </title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
   <div class="container">
     <!-- Header section: logo and blog -->
-    <header-section class="flex items-center justify-between bg-gray-800 text-lime-90 p-4">
+    <div class="flex items-center justify-between bg-gray-800 text-lime-90 p-4">
       <div class="geometry-logo text-4xl font-semibold uppercase text-white">
         <h1>Interactive <br>geometry</h1>
       </div>
@@ -20,134 +21,153 @@
           Blog
         </button>
       </div>
-    </header-section>
+    </div>
     <!-- End Header section: logo and blog -->
 
-    <main>
-      <!-- start main section -->
-      <section class="geometry grid grid-rows-2 grid-flow-col gap-4">
-        <div class="flex justify-center">
-          <div class="rounded-lg shadow-lg bg-white">
-            <a href="#!">
-              <img class="rounded-t-lg m-auto" src="./images/triangle.png" alt="" />
-            </a>
-            <div class="p-6 text-center">
-              <h5 class="text-gray-900 text-xl font-medium mb-2">Triangle</h5>
-              <p class="text-gray-700 text-base mb-4">
-                Area(A) = 0.5 x b x h
-              </p>
-              <div class="grid grid-flow-col">
-                <input class="bg-gray-500 rounded p-2" type="text" placeholder="b"><label class="p-1">b</label>
-                <input class="bg-gray-500 rounded p-2" type="text" placeholder="h"><label class="p-1">h</label>
-              </div>
+    <main class="geometry-main">
+      <div class="geometry p-4">
+        <!-- triangle -->
+        <div class="bg-white">
+          <a href="#!">
+            <img class="m-auto w-100" src="./images/triangle.png" alt="" />
+          </a>
+          <div class="p-6 text-center">
+            <h5 class="text-gray-900 text-xl font-medium mb-2">Triangle</h5>
+            <p class="text-gray-700 text-base mb-4">
+              Area(A) = 0.5 x b x h
+            </p>
+            <div class="">
+              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="b"><label class="p-1">b</label>
+              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="h"><label class="p-1">h</label>
             </div>
-            <button type="button"
-              class="inline-block w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate
-            </button>
           </div>
+          <button type="button"
+            class="block m-auto px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate
+          </button>
+
         </div>
-        <div class="flex justify-center">
-          <div class="rounded-lg shadow-lg bg-white">
-            <a href="#!">
-              <img class="rounded-t-lg m-auto" src="./images/triangle.png" alt="" />
-            </a>
-            <div class="p-6 text-center">
-              <h5 class="text-gray-900 text-xl font-medium mb-2">Triangle</h5>
-              <p class="text-gray-700 text-base mb-4">
-                Area(A) = 0.5 x b x h
-              </p>
-              <div class="grid grid-flow-col">
-                <input class="bg-gray-500 rounded p-2" type="text" placeholder="b"><label class="p-1">b</label>
-                <input class="bg-gray-500 rounded p-2" type="text" placeholder="h"><label class="p-1">h</label>
-              </div>
+        <!-- end triangle -->
+
+        <!-- start rectangle  -->
+
+        <div class="rounded-lg shadow-lg bg-white">
+          <a href="#!">
+            <img class="rounded-t-lg m-auto" src="./images/rectangle.png" alt="" />
+          </a>
+          <div class="p-6 text-center">
+            <h5 class="text-gray-900 text-xl font-medium mb-2">Rectangle</h5>
+            <p class="text-gray-700 text-base mb-4">
+              Area(A) = 0.5 x b x h
+            </p>
+            <div class="">
+              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="b"><label class="p-1">b</label>
+              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="h"><label class="p-1">h</label>
             </div>
-            <button type="button"
-              class="inline-block w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate
-            </button>
           </div>
+          <button type="button"
+            class="block m-auto px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate
+          </button>
+
         </div>
-        <div class="flex justify-center">
-          <div class="rounded-lg shadow-lg bg-white">
-            <a href="#!">
-              <img class="rounded-t-lg m-auto" src="./images/triangle.png" alt="" />
-            </a>
-            <div class="p-6 text-center">
-              <h5 class="text-gray-900 text-xl font-medium mb-2">Triangle</h5>
-              <p class="text-gray-700 text-base mb-4">
-                Area(A) = 0.5 x b x h
-              </p>
-              <div class="grid grid-flow-col">
-                <input class="bg-gray-500 rounded p-2" type="text" placeholder="b"><label class="p-1">b</label>
-                <input class="bg-gray-500 rounded p-2" type="text" placeholder="h"><label class="p-1">h</label>
-              </div>
+        <!-- endt rectangle  -->
+
+        <!-- start parallelogram  -->
+
+        <div class="rounded-lg shadow-lg bg-white">
+          <a href="#!">
+            <img class="rounded-t-lg m-auto" src="./images/parallelogram.png" alt="" />
+          </a>
+          <div class="p-6 text-center">
+            <h5 class="text-gray-900 text-xl font-medium mb-2">parallelogram</h5>
+            <p class="text-gray-700 text-base mb-4">
+              Area(A) = 0.5 x b x h
+            </p>
+            <div class="">
+              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="b"><label class="p-1">b</label>
+              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="h"><label class="p-1">h</label>
             </div>
-            <button type="button"
-              class="inline-block w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate
-            </button>
           </div>
+          <button type="button"
+            class="block m-auto px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate
+          </button>
         </div>
-        <div class="flex justify-center">
-          <div class="rounded-lg shadow-lg bg-white">
-            <a href="#!">
-              <img class="rounded-t-lg m-auto" src="./images/triangle.png" alt="" />
-            </a>
-            <div class="p-6 text-center">
-              <h5 class="text-gray-900 text-xl font-medium mb-2">Triangle</h5>
-              <p class="text-gray-700 text-base mb-4">
-                Area(A) = 0.5 x b x h
-              </p>
-              <div class="grid grid-flow-col">
-                <input class="bg-gray-500 rounded p-2" type="text" placeholder="b"><label class="p-1">b</label>
-                <input class="bg-gray-500 rounded p-2" type="text" placeholder="h"><label class="p-1">h</label>
-              </div>
+
+        <!-- end parallelogram -->
+
+        <!-- start rhombus -->
+
+        <div class="rounded-lg shadow-lg bg-white">
+          <a href="#!">
+            <img class="rounded-t-lg m-auto" src="./images/rhombus.png" alt="" />
+          </a>
+          <div class="p-6 text-center">
+            <h5 class="text-gray-900 text-xl font-medium mb-2">Rhombus</h5>
+            <p class="text-gray-700 text-base mb-4">
+              Area(A) = 0.5 x b x h
+            </p>
+            <div class="">
+              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="b"><label class="p-1">b</label>
+              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="h"><label class="p-1">h</label>
             </div>
-            <button type="button"
-              class="inline-block w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate
-            </button>
           </div>
+          <button type="button"
+            class="block m-auto px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate
+          </button>
+
         </div>
-        <div class="flex justify-center">
-          <div class="rounded-lg shadow-lg bg-white">
-            <a href="#!">
-              <img class="rounded-t-lg m-auto" src="./images/triangle.png" alt="" />
-            </a>
-            <div class="p-6 text-center">
-              <h5 class="text-gray-900 text-xl font-medium mb-2">Triangle</h5>
-              <p class="text-gray-700 text-base mb-4">
-                Area(A) = 0.5 x b x h
-              </p>
-              <div class="grid grid-flow-col">
-                <input class="bg-gray-500 rounded p-2" type="text" placeholder="b"><label class="p-1">b</label>
-                <input class="bg-gray-500 rounded p-2" type="text" placeholder="h"><label class="p-1">h</label>
-              </div>
+        <!-- end rhombus -->
+
+        <!-- start pantagon -->
+
+        <div class="rounded-lg shadow-lg bg-white">
+          <a href="#!">
+            <img class="rounded-t-lg m-auto" src="./images/pentagon.png" alt="" />
+          </a>
+          <div class="p-6 text-center">
+            <h5 class="text-gray-900 text-xl font-medium mb-2">Pentagon</h5>
+            <p class="text-gray-700 text-base mb-4">
+              Area(A) = 0.5 x b x h
+            </p>
+            <div class="">
+              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="b"><label class="p-1">b</label>
+              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="h"><label class="p-1">h</label>
             </div>
-            <button type="button"
-              class="inline-block w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate
-            </button>
           </div>
+          <button type="button"
+            class="block m-auto px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate
+          </button>
         </div>
-        <div class="flex justify-center">
-          <div class="rounded-lg shadow-lg bg-white">
-            <a href="#!">
-              <img class="rounded-t-lg m-auto" src="./images/triangle.png" alt="" />
-            </a>
-            <div class="p-6 text-center">
-              <h5 class="text-gray-900 text-xl font-medium mb-2">Triangle</h5>
-              <p class="text-gray-700 text-base mb-4">
-                Area(A) = 0.5 x b x h
-              </p>
-              <div class="grid grid-flow-col">
-                <input class="bg-gray-500 rounded p-2" type="text" placeholder="b"><label class="p-1">b</label>
-                <input class="bg-gray-500 rounded p-2" type="text" placeholder="h"><label class="p-1">h</label>
-              </div>
+
+        <!-- end pantagon -->
+
+        <!-- start ellipse -->
+
+        <div class="rounded-lg shadow-lg bg-white">
+          <a href="#!">
+            <img class="rounded-t-lg m-auto" src="./images/ellipse.png" alt="" />
+          </a>
+          <div class="p-6 text-center">
+            <h5 class="text-gray-900 text-xl font-medium mb-2">Ellipse</h5>
+            <p class="text-gray-700 text-base mb-4">
+              Area(A) = 0.5 x b x h
+            </p>
+            <div class="">
+              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="b"><label class="p-1">b</label>
+              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="h"><label class="p-1">h</label>
             </div>
-            <button type="button"
-              class="inline-block w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate
-            </button>
           </div>
+          <button type="button"
+            class="block w-100 m-auto px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate
+          </button>
+
         </div>
-      </section>
-      <!-- End start main section -->
+        <!-- end ellipse -->
+      </div>
+
+      <div class="geometry-accounting bg-blue-500 p-2">
+
+        accounting
+      </div>
     </main>
   </div>
 
