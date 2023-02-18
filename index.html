@@ -84,14 +84,16 @@
           <div class="p-6 text-center">
             <h5 class="text-gray-900 text-xl font-medium mb-2">parallelogram</h5>
             <p class="text-gray-700 text-base mb-4">
-              Area(A) = 0.5 x b x h
+              Area(A) = b x h
             </p>
             <div class="">
-              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="b"><label class="p-1">b</label>
-              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="h"><label class="p-1">h</label>
+              <input id="parallelgram-base" size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="b"><label
+                class="p-1">b</label>
+              <input id="parallelgram-height" size="5" class="bg-gray-500 rounded p-2" type="text"
+                placeholder="h"><label class="p-1">h</label>
             </div>
           </div>
-          <button type="button"
+          <button id="parallelogram-btn" type="button"
             class="block m-auto px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate
           </button>
         </div>
@@ -99,7 +101,6 @@
         <!-- end parallelogram -->
 
         <!-- start rhombus -->
-
         <div class="rounded-lg shadow-lg bg-white">
           <a href="#!">
             <img class="rounded-t-lg m-auto" src="./images/rhombus.png" alt="" />
@@ -107,16 +108,16 @@
           <div class="p-6 text-center">
             <h5 class="text-gray-900 text-xl font-medium mb-2">Rhombus</h5>
             <p class="text-gray-700 text-base mb-4">
-              Area(A) = 0.5 x b x h
+              Area(A) = 0.5 x d<sub>1</sub> x d <sub>2</sub>
             </p>
             <div class="">
-              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="d1"><label
+              <input id="rhombus-d1" size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="d1"><label
                 class="p-1">d<sub>1</sub></d></label>
-              <input size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="d2"><label
+              <input id="rhombus-d2" size="5" class="bg-gray-500 rounded p-2" type="text" placeholder="d2"><label
                 class="p-1">d<sub>2</sub></d></label>
             </div>
           </div>
-          <button type="button"
+          <button id="rhombus-btn" type="button"
             class="block m-auto px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Calculate
           </button>
 
