@@ -8,6 +8,7 @@ document.getElementById('triangle-btn').addEventListener('click', function(){
   const triangleHeightText = triangleHeight.value;
   const triangleHeightTextInfloat = parseFloat(triangleHeightText)
 
+//validation
    if(isNaN(triangleBaseTextinNumber) || isNaN(triangleHeightTextInfloat)){
     alert('please input number value');
     return;
@@ -17,8 +18,11 @@ document.getElementById('triangle-btn').addEventListener('click', function(){
      return;
    }
    
-  const triangleArea = (triangleBaseTextinNumber * triangleHeightTextInfloat)/2;
-  const triangleAreaAreaInTwoDecimal = triangleArea.toFixed(2)
+  // inputValidation(triangleBaseTextinNumber, triangleHeightTextInfloat);
+
+  // const triangleArea = (triangleBaseTextinNumber * triangleHeightTextInfloat)/2;
+  // const triangleAreaAreaInTwoDecimal = (0.5*triangleBaseTextinNumber * triangleHeightTextInfloat).toFixed(2)
+  const triangleAreaAreaInTwoDecimal = calculationArea(triangleBaseTextinNumber, triangleHeightTextInfloat)
 
   const ol = document.getElementById("calculation-area");
   const li = document.createElement("li");
@@ -55,6 +59,7 @@ document.getElementById('rectangle-btn').addEventListener('click', function(){
      return;
    }
 
+  // inputValidation(rectangleWidthTextInNumber, rectangleLengthTextInNumber);
 
   const rectangleArea = (rectangleWidthTextInNumber * rectangleLengthTextInNumber);
   const rectangleAreaInTwoDeciaml = rectangleArea.toFixed(2);
@@ -94,6 +99,8 @@ document.getElementById('parallelogram-btn').addEventListener('click', function(
       return;
     }
 
+  // inputValidation(parallelgramBaseTextInNumber, parallelgramHeigntTextInNumber);
+
   const parallelgramArea = (parallelgramBaseTextInNumber * parallelgramHeigntTextInNumber).toFixed(2);
 
   const ol = document.getElementById("calculation-area");
@@ -130,7 +137,10 @@ document.getElementById('rhombus-btn').addEventListener('click', function(){
       return;
     }
 
-  const rhombusArea = (.5* rhombusD1InNumber * rhombusD2InNumber).toFixed(2);
+  // inputValidation(rhombusD1InNumber, rhombusD2InNumber)
+
+  // const rhombusArea = (.5* rhombusD1InNumber * rhombusD2InNumber).toFixed(2);
+  const rhombusArea = calculationArea(rhombusD1InNumber, rhombusD2InNumber);
 
   const ol = document.getElementById("calculation-area");
   const li = document.createElement("li");
@@ -166,7 +176,11 @@ document.getElementById('pentagon-btn').addEventListener('click', function(){
     return;
   }
 
-  const pentagonArea = (.5*pentagonperimeterInNumber * pentagonApothemInNumber).toFixed(2);
+  // inputValidation(pentagonperimeterInNumber, pentagonApothemInNumber)
+
+  // const pentagonArea = (.5*pentagonperimeterInNumber * pentagonApothemInNumber).toFixed(2);
+   const pentagonArea = calculationArea(pentagonperimeterInNumber, pentagonApothemInNumber);
+  
 
   const ol = document.getElementById("calculation-area");
   const li = document.createElement("li");
@@ -203,6 +217,8 @@ document.getElementById('ellipse-btn').addEventListener('click', function(){
       return;
     }
 
+//  inputValidation(aAxisTextNumber, bAxisTextNumber);
+
   const ellipseArea = (3.14*aAxisTextNumber * bAxisTextNumber).toFixed(2);
 
   const ol = document.getElementById("calculation-area");
@@ -223,4 +239,22 @@ document.getElementById('ellipse-btn').addEventListener('click', function(){
 function emptyInputField(firstvalue, secondvalue){
   firstvalue.value = "";
   secondvalue.value = ""
+}
+
+//validation function
+// function inputValidation(firstInputvalue, secondInputValue){
+//   if(isNaN(firstInputvalue) || isNaN(secondInputValue)){
+//     alert('please input number value');
+//     return;
+//     }
+    
+//     if(firstInputvalue <=0 ||secondInputValue <=0 ){
+//     alert('Please enter positive value');
+//       return;
+//     }
+// }
+
+function calculationArea(firstvalue, secondValue){
+  const Area = (.5* firstvalue * secondValue).toFixed(2);
+  return Area;
 }
