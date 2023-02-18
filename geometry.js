@@ -14,7 +14,7 @@ document.getElementById('triangle-btn').addEventListener('click', function(){
 
   const ol = document.getElementById("calculation-area");
   const li = document.createElement("li");
-  li.innerText = "triangle" + " " + triangleAreaAreaInTwoDecimal;
+  li.innerText = "Triangle Area" + " " + triangleAreaAreaInTwoDecimal;
   ol.appendChild(li)
 })
 
@@ -52,9 +52,28 @@ document.getElementById('parallelogram-btn').addEventListener('click', function(
 
   const ol = document.getElementById("calculation-area");
   const li = document.createElement("li");
-  li.innerText = "parallelgramArea" + " " + parallelgramArea;
+  li.innerText = "Parallelgram Area" + " " + parallelgramArea;
   ol.appendChild(li)
 })
+
+//Pentagon
+document.getElementById('pentagon-btn').addEventListener('click', function(){
+  const pentagonperimeter = document.getElementById('pentagon-perimeter');
+  const pentagonperimeterText = pentagonperimeter.value;
+  const pentagonperimeterInNumber = parseFloat(pentagonperimeterText)
+
+  const pentagonApothem = document.getElementById('pentagon-perimeter');
+  const pentagonApothemText = pentagonApothem.value;
+  const pentagonApothemInNumber = parseFloat(pentagonApothemText)
+
+  const pentagonArea = .5*(pentagonperimeterInNumber * pentagonApothemInNumber).toFixed(2);
+
+  const ol = document.getElementById("calculation-area");
+  const li = document.createElement("li");
+  li.innerText = "Pentagon Area" + " " + pentagonArea;
+  ol.appendChild(li)
+})
+
 
 //Rhombus
 document.getElementById('rhombus-btn').addEventListener('click', function(){
@@ -63,13 +82,13 @@ document.getElementById('rhombus-btn').addEventListener('click', function(){
   const rhombusD1InNumber = parseFloat(rhombusD1Text)
 
   const rhombusD2 = document.getElementById('rhombus-d1');
-  const rhombusD2Text = rhombusD1.value;
-  const rhombusD2InNumber = parseFloat(rhombusD1Text)
+  const rhombusD2Text = rhombusD2.value;
+  const rhombusD2InNumber = parseFloat(rhombusD2Text)
 
-  const parallelgramArea = (parallelgramBaseTextInNumber * parallelgramHeigntTextInNumber).toFixed(2);
+  const rhombusAArea = .5*(rhombusD1InNumber * rhombusD2InNumber).toFixed(2);
 
   const ol = document.getElementById("calculation-area");
   const li = document.createElement("li");
-  li.innerText = "parallelgramArea" + " " + parallelgramArea;
+  li.innerText = "Rhombus Area" + " " + rhombusAArea;
   ol.appendChild(li)
 })
