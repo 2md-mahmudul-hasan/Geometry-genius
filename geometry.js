@@ -85,10 +85,28 @@ document.getElementById('rhombus-btn').addEventListener('click', function(){
   const rhombusD2Text = rhombusD2.value;
   const rhombusD2InNumber = parseFloat(rhombusD2Text)
 
-  const rhombusAArea = .5*(rhombusD1InNumber * rhombusD2InNumber).toFixed(2);
+  const rhombusArea = .5*(rhombusD1InNumber * rhombusD2InNumber).toFixed(2);
 
   const ol = document.getElementById("calculation-area");
   const li = document.createElement("li");
-  li.innerText = "Rhombus Area" + " " + rhombusAArea;
+  li.innerText = "Rhombus Area" + " " + rhombusArea;
+  ol.appendChild(li)
+})
+
+//ellipse
+document.getElementById('ellipse-btn').addEventListener('click', function(){
+  const aAxis = document.getElementById('a-axis');
+  const aAxisText = aAxis.value;
+  const aAxisTextNumber = parseFloat(aAxisText)
+
+  const bAxis = document.getElementById('b-axis');
+  const bAxisText = bAxis.value;
+  const bAxisTextNumber = parseFloat(bAxisText)
+
+  const ellipseArea = 3.14*(aAxisTextNumber * bAxisTextNumber).toFixed(2);
+
+  const ol = document.getElementById("calculation-area");
+  const li = document.createElement("li");
+  li.innerText = "ellipse Area" + " " + ellipseArea;
   ol.appendChild(li)
 })
