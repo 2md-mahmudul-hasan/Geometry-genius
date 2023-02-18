@@ -258,3 +258,4 @@ function calculationArea(firstvalue, secondValue){
   const Area = (.5* firstvalue * secondValue).toFixed(2);
   return Area;
 }
+
