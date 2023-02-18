@@ -27,6 +27,10 @@ document.getElementById('triangle-btn').addEventListener('click', function(){
   btn.innerText = "convert to m2"
   li.innerText = "Triangle" + " " + triangleAreaAreaInTwoDecimal ;
   ol.appendChild(li).appendChild(btn)
+
+  triangleBase.value = "";
+  triangleHeight.value = "";
+
 })
 
 //rectangle
@@ -60,7 +64,10 @@ document.getElementById('rectangle-btn').addEventListener('click', function(){
     btn.classList.add("cal-btn");
     btn.innerText = "convert to m2"
     li.innerText = "Rectangle" + " " + rectangleAreaInTwoDeciaml;
-    ol.appendChild(li).appendChild(btn)
+    ol.appendChild(li).appendChild(btn);
+
+    rectangleWidth.value = "";
+    rectangleLength.value = "";
 })
 
 //parallelogram
@@ -92,7 +99,10 @@ document.getElementById('parallelogram-btn').addEventListener('click', function(
   btn.classList.add("cal-btn");
   btn.innerText = "convert to m2"
   li.innerText = "Parallelgram" + " " + parallelgramArea;
-  ol.appendChild(li).appendChild(btn)
+  ol.appendChild(li).appendChild(btn);
+
+  parallelogramBase.value = "";
+  parallelgramHeignt.value = "";
 })
 
 //Rhombus
@@ -123,7 +133,10 @@ document.getElementById('rhombus-btn').addEventListener('click', function(){
   btn.classList.add("cal-btn");
   btn.innerText = "convert to m2"
   li.innerText = "Rhombus" + " " + rhombusArea;
-  ol.appendChild(li).appendChild(btn)
+  ol.appendChild(li).appendChild(btn);
+
+  rhombusD1.value = "";
+  rhombusD2.value = "";
 })
 
 //Pentagon
@@ -155,7 +168,10 @@ document.getElementById('pentagon-btn').addEventListener('click', function(){
   btn.classList.add("cal-btn");
   btn.innerText = "convert to m2"
   li.innerText = "Pentagon" + " " + pentagonArea;
-  ol.appendChild(li).appendChild(btn)
+  ol.appendChild(li).appendChild(btn);
+
+  pentagonperimeter.value = "";
+  pentagonApothem.value = "";
 })
 
 
@@ -188,5 +204,8 @@ document.getElementById('ellipse-btn').addEventListener('click', function(){
   btn.classList.add("cal-btn");
   btn.innerText = "convert to m2"
   li.innerText = "ellipse" + " " + ellipseArea;
-  ol.appendChild(li).appendChild(btn)
+  ol.appendChild(li).appendChild(btn);
+
+  aAxis.value = "";
+  bAxis.value = "";
 })
