@@ -1,5 +1,8 @@
+
+
 // triangle 
 document.getElementById('triangle-btn').addEventListener('click', function(){
+
   const triangleBase = document.getElementById('triangle-base');
   const triangleBaseText = triangleBase.value;
   const triangleBaseTextinNumber = parseFloat(triangleBaseText);
@@ -54,7 +57,7 @@ document.getElementById('rectangle-btn').addEventListener('click', function(){
     alert('please input number value');
     return;
     }
-    if(rectangleWidthTextInNumber <=0 ||rectangleWidthTextInNumber <=0 ){
+    if(rectangleWidthTextInNumber <=0 ||rectangleLengthTextInNumber <=0 ){
     alert('Please enter positive value');
      return;
    }
@@ -258,4 +261,12 @@ function calculationArea(firstvalue, secondValue){
   const Area = (.5* firstvalue * secondValue).toFixed(2);
   return Area;
 }
+
+// function randomBgColor(){
+//   const red = Math.floor(Math.random() * 255);
+//   const green= Math.floor(Math.random() * 255);
+//   const blue = Math.floor(Math.random() * 255);
+
+//   return `rgb(${red}, ${green}, ${blue})`
+// }
 
