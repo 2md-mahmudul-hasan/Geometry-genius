@@ -28,9 +28,10 @@ document.getElementById('triangle-btn').addEventListener('click', function(){
   li.innerText = "Triangle" + " " + triangleAreaAreaInTwoDecimal ;
   ol.appendChild(li).appendChild(btn)
 
-  triangleBase.value = "";
-  triangleHeight.value = "";
+  // triangleBase.value = "";
+  // triangleHeight.value = "";
 
+  emptyInputField(triangleBase, triangleHeight)
 })
 
 //rectangle
@@ -66,8 +67,10 @@ document.getElementById('rectangle-btn').addEventListener('click', function(){
     li.innerText = "Rectangle" + " " + rectangleAreaInTwoDeciaml;
     ol.appendChild(li).appendChild(btn);
 
-    rectangleWidth.value = "";
-    rectangleLength.value = "";
+    // rectangleWidth.value = "";
+    // rectangleLength.value = "";
+
+    emptyInputField(rectangleWidth, rectangleLength)
 })
 
 //parallelogram
@@ -101,8 +104,10 @@ document.getElementById('parallelogram-btn').addEventListener('click', function(
   li.innerText = "Parallelgram" + " " + parallelgramArea;
   ol.appendChild(li).appendChild(btn);
 
-  parallelogramBase.value = "";
-  parallelgramHeignt.value = "";
+  // parallelogramBase.value = "";
+  // parallelgramHeignt.value = "";
+
+  emptyInputField(parallelogramBase, parallelgramHeignt)
 })
 
 //Rhombus
@@ -135,8 +140,9 @@ document.getElementById('rhombus-btn').addEventListener('click', function(){
   li.innerText = "Rhombus" + " " + rhombusArea;
   ol.appendChild(li).appendChild(btn);
 
-  rhombusD1.value = "";
-  rhombusD2.value = "";
+  // rhombusD1.value = "";
+  // rhombusD2.value = "";
+  emptyInputField(rhombusD1, rhombusD2)
 })
 
 //Pentagon
@@ -160,7 +166,7 @@ document.getElementById('pentagon-btn').addEventListener('click', function(){
     return;
   }
 
-  const pentagonArea = .5*(pentagonperimeterInNumber * pentagonApothemInNumber).toFixed(2);
+  const pentagonArea = (.5*pentagonperimeterInNumber * pentagonApothemInNumber).toFixed(2);
 
   const ol = document.getElementById("calculation-area");
   const li = document.createElement("li");
@@ -170,8 +176,9 @@ document.getElementById('pentagon-btn').addEventListener('click', function(){
   li.innerText = "Pentagon" + " " + pentagonArea;
   ol.appendChild(li).appendChild(btn);
 
-  pentagonperimeter.value = "";
-  pentagonApothem.value = "";
+  // pentagonperimeter.value = "";
+  // pentagonApothem.value = "";
+  emptyInputField(pentagonperimeter, pentagonApothem)
 })
 
 
@@ -196,7 +203,7 @@ document.getElementById('ellipse-btn').addEventListener('click', function(){
       return;
     }
 
-  const ellipseArea = 3.14*(aAxisTextNumber * bAxisTextNumber).toFixed(2);
+  const ellipseArea = (3.14*aAxisTextNumber * bAxisTextNumber).toFixed(2);
 
   const ol = document.getElementById("calculation-area");
   const li = document.createElement("li");
@@ -206,6 +213,14 @@ document.getElementById('ellipse-btn').addEventListener('click', function(){
   li.innerText = "ellipse" + " " + ellipseArea;
   ol.appendChild(li).appendChild(btn);
 
-  aAxis.value = "";
-  bAxis.value = "";
+  // aAxis.value = "";
+  // bAxis.value = "";
+
+  emptyInputField(aAxis, bAxis)
 })
+
+//input field empty function
+function emptyInputField(firstvalue, secondvalue){
+  firstvalue.value = "";
+  secondvalue.value = ""
+}
